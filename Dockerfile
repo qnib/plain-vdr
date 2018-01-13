@@ -10,3 +10,4 @@ VOLUME ["/var/lib/video"]
 CMD ["/opt/qnib/vdr/bin/start.sh"]
 ENV VDR_VNSI_PORT=34890
 COPY etc/channels.conf /var/lib/vdr/
+RUN chown -R vdr: /var/lib/vdr /etc/vdr
