@@ -8,4 +8,5 @@ COPY etc/allowed_hosts.conf /var/lib/vdr/plugins/vnsiserver/allowed_hosts.conf
 COPY bin/start.sh /opt/qnib/vdr/bin/
 VOLUME ["/var/lib/video"]
 CMD ["/opt/qnib/vdr/bin/start.sh"]
+ENV VDR_VNSI_PORT=34890
 COPY etc/channels.conf /var/lib/vdr/
