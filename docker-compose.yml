@@ -1,18 +1,19 @@
-version: "3"
+version: "3.3"
 services:
   vdr:
     image: qnib/plain-vdr
     networks: ["hostnet"]
     volumes:
-     - /var/lib/video
+     - /srv/video:/var/lib/video
     environment:
       - VDR_VNSI_PORT=44890 
       - SVDRP_PORT=16419 
     #ports:
     #  - 16419:16419/tcp 
-    #  - 16419:16419/udp
     #  - 44890:44890/tcp
-    #  - 44890:44890/udp
+    #  - 1900:1900/udp
+    #  - 44705:44705/udp
+    #  - 44706:44706/udp
 
 networks:
   hostnet:
