@@ -1,4 +1,4 @@
 #!/bin/bash
 set -ex
 
-vdr -p ${SVDRP_PORT} -P"vnsiserver -p ${VDR_VNSI_PORT}" -P'satip --devices=1 -s 192.168.1.38|DVBS2-2:S19.2E'
+exec vdr -p ${SVDRP_PORT} -P"vnsiserver -p ${VDR_VNSI_PORT}" -P"satip --devices=1 -s ${VDR_SATIP_DEVICE}"
