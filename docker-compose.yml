@@ -6,8 +6,9 @@ services:
     volumes:
      - /srv/video:/var/lib/video
     environment:
-      - VDR_VNSI_PORT=44890 
-      - SVDRP_PORT=16419 
+      - VDR_VNSI_PORT=34890 
+      - SVDRP_PORT=6419 
+      - TZ=Europe/Berlin
     #ports:
     #  - 16419:16419/tcp 
     #  - 44890:44890/tcp
